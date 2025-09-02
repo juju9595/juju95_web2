@@ -19,12 +19,21 @@ public class AlarmHandler extends TextWebSocketHandler {
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         System.out.println("익명의 유저가 접속했습니다.");
         접속명단.add(session);
+
+        for(WebSocketSession clientSocket : 접속명단){
+            clientSocket.sendMessage(new TextMessage("익명의 유저가 접속했습니다."));
+        }
+
     }
 
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
         System.out.println("익명의 유저가 퇴장했습니다.");
         접속명단.remove(session);
+
+        for(WebSocketSession clientSocket : 접속명단){
+            clientSocket.sendMessage(new TextMessage("익명의 유저가 퇴장했습니다."));
+        }
     }
 
 }
