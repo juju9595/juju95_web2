@@ -31,7 +31,7 @@ public class TaskDao extends Dao{
     public List<Map<String, Object>> task2(){
         List<Map<String, Object>> list = new ArrayList<>();
         try{
-            String sql = "select *from products";
+            String sql = "select * from products";
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -47,7 +47,7 @@ public class TaskDao extends Dao{
     //3. 재고가 10 이하인 상품의 재고를 +20개 추가한다.
     public void task3(){
         try {
-            String sql = "uqdate products set stock_quantity = stock_quantity + 20 where stock_quantity <= 10";
+            String sql = "update products set stock_quantity = stock_quantity + 20 where stock_quantity <= 10";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.executeUpdate();
         } catch (Exception e) {
