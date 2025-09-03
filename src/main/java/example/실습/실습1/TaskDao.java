@@ -17,7 +17,7 @@ public class TaskDao extends Dao{
     //1. 모든 제품 3개씩 감소 요청
     public int task1(){
         try{
-            String sql = "update products set stock_quantity - 3 where stock_quantity >= 3";
+            String sql = "update products set stock_quantity = stock_quantity - 3 where stock_quantity >= 3";
             PreparedStatement ps = conn.prepareStatement(sql);
             int result = ps.executeUpdate();  //업데이트된 갯수
             return result;
