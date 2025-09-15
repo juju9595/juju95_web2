@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.5.5'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group = 'com.example'
@@ -40,6 +41,10 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
     // [7] 셀레니움 브라우저 매니저 (크롬)
     implementation 'io.github.bonigarcia:webdrivermanager:6.3.1'
+    // [8] 마이바티스
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.5'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
 }
 
 tasks.named('test') {
