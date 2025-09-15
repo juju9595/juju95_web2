@@ -32,7 +32,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     // [3] mysql jdbc
     runtimeOnly 'com.mysql:mysql-connector-j'
+    // [4] websocket
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    // [5] JSOUP
+    implementation("org.jsoup:jsoup:1.21.2")
 }
 
 tasks.named('test') {
