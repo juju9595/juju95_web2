@@ -30,7 +30,8 @@ export default function Task2( props ){
             <ul>
                 <li> {title}</li>
                 <li> {price.toLocaleString()}</li>
-                <li> {inStock == true ? '재고있음' : '재고없음'}</li>
+                <li className={inStock ? 'stock in' : 'stock out'}> 
+                    {inStock == true ? '재고있음' : '재고없음'}</li>
             </ul>
         </>)
     }// func end 
