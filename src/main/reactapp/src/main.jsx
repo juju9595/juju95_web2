@@ -16,8 +16,29 @@ import {createRoot} from 'react-dom/client'
 const root = document.querySelector('#root');
 // 3. 가져온 root 마크업을 createRoot 함수의 매개변수로 전달한다.
 const create = createRoot(root);
+
+
+
+//***********최초 렌더링할  */
 // 4. root에 렌더링할 컴포넌트(화면함수)
- // 4-1 : 렌더링할 컴포넌트(함수) 가져오기
- import App from './App.jsx'
- // 4-2 : 렌더링하기
- create.render( <App/> );
+// 4-1 : 렌더링할 컴포넌트(함수) 가져오기
+//  import App from './App.jsx'
+// 4-2 : 렌더링하기
+//  create.render( <App/> );
+
+//day01
+// import Component1 from './example/day01/Component1.jsx';
+// import { Component2 } from './example/day01/Component2.jsx';
+// import Coomponent3 from './example/day01/Component3.jsx';
+
+//create.render( <Component1> </Component1>)
+// create.render(<Component2 />);
+// create.render(<Coomponent3/>)
+
+// day01 Task1
+// import Task1 from './example/day01/Task1';
+// create.render(<Task1 />);
+
+//day01 Task2
+import Task2 from './example/day01/Task2';
+create.render(<Task2/>);

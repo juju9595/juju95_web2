@@ -1,0 +1,21 @@
+/* 컴포넌트 에서 css 호출하는 방법
+    import 'css파일경로'
+*/
+
+
+.products{
+    display: flex;
+}
+
+.products ul{
+    width: 130px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 40px;
+    list-style: none;
+}
+
+.products li{
+    padding-bottom: 20px;
+}
