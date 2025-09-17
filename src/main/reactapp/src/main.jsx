@@ -30,8 +30,8 @@ const create = createRoot(root);
 // import Component1 from './example/day01/Component1.jsx';
 // import { Component2 } from './example/day01/Component2.jsx';
 // import Coomponent3 from './example/day01/Component3.jsx';
-
-//create.render( <Component1> </Component1>)
+// reder은 1번만 가능하다
+// create.render( <Component1> </Component1>)
 // create.render(<Component2 />);
 // create.render(<Coomponent3/>)
 
@@ -40,5 +40,26 @@ const create = createRoot(root);
 // create.render(<Task1 />);
 
 //day01 Task2
-import Task2 from './example/day01/Task2';
-create.render(<Task2/>);
+// import Task2 from './example/day01/Task2';
+// create.render(<Task2/>);
+
+//day02 
+// import Component4 from './example/day02/Component4';
+// create.render(<Component4/>);
+
+// import Component5 from './example/day02/Component5';
+// create.render(<Component5/>);
+
+// import Component6 from './example/day02/Component6';
+// create.render(<Component6/>);
+
+// import Component7 from './example/day02/Component7';
+// create.render(<Component7/>);
+
+// import Task3 from './example/day02/Task3';
+// create.render(<Task3/>);
+
+import Task4 from './example/day02/Task4';
+create.render(<Task4/>);
+
+
