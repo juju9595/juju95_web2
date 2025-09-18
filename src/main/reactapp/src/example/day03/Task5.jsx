@@ -7,7 +7,7 @@ export default function Task5( props ){
     const [ mname , setMname ] = useState('')
     const [ mphone , setMphone ] = useState('')
     const [ mage , setMage ] = useState('')
-    
+
     const boardWrite = async( ) => {
         const obj = { mname , mphone , mage }
         const response = await axios.post("http://localhost:8080/member", obj)
@@ -23,9 +23,9 @@ export default function Task5( props ){
 
     useEffect(()=>{boardPrint()},[])
 
-    async function onDelete( deleteMno ){
-        const response = await axios.delete("http://localhost:8080/member?mno="+deleteMno)
-        const newMembers = members.filter( (member)=> { return member.mno != deletePhone ; })
+    async function boardDelete( deleteMno ){
+        const response = await axios.delete("http://localhost:8080/member?mno="+deleteMno);
+        const newMembers = members.filter( (member)=> { return member.mno != deleteMno ; })
         setMembers( [ ...newMembers ] );
     }
 
@@ -38,10 +38,11 @@ export default function Task5( props ){
         <button onClick={ boardWrite }> 등록 </button> <br/>
         {   members.map( ( m ) => {
                 return <div>
-                        { m.mname } { m.mphone } { m.mage }
-                        <button onClick={ ()=> { onDelete}  }> 삭제 </button>
+                        성명: { m.mname } 연락처: { m.mphone } 나이:{ m.mage }
+                        <button onClick={()=> { boardDelete(m.mno)} }> 삭제 </button>
                     </div>
             })
         }
+        총 {members.length}명
     </>)
 }
