@@ -86,4 +86,32 @@ INSERT INTO board (bcontent, bwriter) VALUES ('오늘도 화이팅!', '리사');
 INSERT INTO board (bcontent, bwriter) VALUES ('운전 조심하세요~', '태연');
 
 select * from board;
-"
+
+create table member(
+	mno int auto_increment, 
+	mname varchar(10) not null,
+    mage varchar(5) not null,
+    mphone varchar(20) not null,
+    constraint primary key(mno)
+);
+
+create table movie(
+	pno int auto_increment,
+    mtitle varchar(50) not null,
+    mdirector varchar(40) not null,
+    mgenre varchar(10) not null,
+    mcontent longtext not null,
+    mpwd varchar(20) not null,
+    constraint primary key(pno)
+);
+
+create table reply(
+	rno int auto_increment,
+    pno int not null,
+    rcontent longtext not null,
+    rpwd varchar(20) not null,
+    constraint primary key(rno)
+    );
+    
+select *from movie;
+select *from reply;
