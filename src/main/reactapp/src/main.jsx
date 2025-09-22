@@ -74,5 +74,15 @@ const create = createRoot(root);
 // import Task5  from './example/day03/Task5';
 // create.render(<Task5/>)
 
-import Task6 from './example/day04/Task6';
+// import Task6 from './example/day04/Task6';
+// create.render(<Task6/>)
+
+//day05
+// import Component11 from './example/day05/Component11';
+// create.render(<Component11/>);
+
+// import Component12 from './example/day05/Component12';
+// create.render(<Component12/>)
+
+import Task6 from './example/day05/Task6';
 create.render(<Task6/>)
