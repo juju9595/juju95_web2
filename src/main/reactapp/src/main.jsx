@@ -101,12 +101,24 @@ const create = createRoot(root);
 //     <Provider store={store }>
 //         <Component13/>
 //     </Provider>);
-import App from './example/day06/실습7/App.jsx';
-import{Provider} from 'react-redux'
-import store from './example/day06/실습7/store/store.jsx';
+// import App from './example/day06/실습7/App.jsx';
+// import{Provider} from 'react-redux'
+// import store, { persistor } from './example/day06/실습7/store/store.jsx';
+// import { PersistGate } from 'redux-persist/integration/react';
+// create.render(
+//     // [2] 내가 만든 persist 공급 , loading : {초기 로딩값} persist  = 내가만든persiststore
+//     // 내가 만든 store를 root 컴포넌트에 공급하여 모든 컴포넌트가 사용할 수 있도록 전역변수*
+//         <Provider store={store} >
+//             <PersistGate loading = {null} persistor = {persistor}>
+//                 <App/>
+//             </PersistGate>
+//         </Provider>
+//         );
+
+import App from './example/day07/실습8/App.jsx';
+import { Provider } from 'react-redux';
+import store from './example/day07/실습8/store/store.js';
 create.render(
-    // 내가 만든 store를 root 컴포넌트에 공급하여 모든 컴포넌트가 사용할 수 있도록 전역변수*
-        <Provider store={store} >
-            <App/>
-        </Provider>
-        );
+    <Provider store={store}>
+        <App/>
+    </Provider>);
