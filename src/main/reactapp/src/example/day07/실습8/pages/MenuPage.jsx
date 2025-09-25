@@ -18,17 +18,17 @@ export default function MenuPage(props){
     return(<>
     <h3> 메뉴페이지 </h3>
     {/* 컴포넌트내 return 안에서는 jsx 문법을 따라야한다. */}
-    
+
         {
         /* jsx 시작알림 */ /* map반복문은 반복할때마다 하나의 리턴값을 반환한다. */
         menu.map((m)=>{
-            return <> 
+            return <>
             <div>
-                {m.name} {m.price} 
-                <button onClick={() =>{addCart(m)}}> 담기 </button> 
+                {m.name} {m.price}
+                <button onClick={() =>{addCart(m)}}> 담기 </button>
             </div>
             </>
-        })} 
+        })}
 
     </>)
 }
