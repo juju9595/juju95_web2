@@ -1,6 +1,5 @@
-package example.실습.실습3.controller;
+package example.day12;
 
-import example.실습.실습3.service.BookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;

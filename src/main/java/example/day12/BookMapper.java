@@ -1,4 +1,4 @@
-package example.실습.실습3.mapper;
+package example.day12;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

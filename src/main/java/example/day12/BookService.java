@@ -1,6 +1,5 @@
-package example.실습.실습3.service;
+package example.day12;
 
-import example.실습.실습3.mapper.BookMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
