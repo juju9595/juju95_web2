@@ -115,13 +115,16 @@ const create = createRoot(root);
 //         </Provider>
 //         );
 
-import App from './example/day07/실습8/App.jsx';
-import { Provider } from 'react-redux';
-import store, {persistor} from './example/day07/실습8/store/store.js';
-import { PersistGate } from 'redux-persist/integration/react';
-create.render(
-    <Provider store={store}>
-        <PersistGate loading = {null} persistor={persistor}>
-            <App/>
-        </PersistGate>
-    </Provider>);
+// import App from './example/day07/실습8/App.jsx';
+// import { Provider } from 'react-redux';
+// import store, {persistor} from './example/day07/실습8/store/store.js';
+// import { PersistGate } from 'redux-persist/integration/react';
+// create.render(
+//     <Provider store={store}>
+//         <PersistGate loading = {null} persistor={persistor}>
+//             <App/>
+//         </PersistGate>
+//     </Provider>);
+
+import Component15 from './example/day08/Component15.jsx';
+create.render(<Component15/>)

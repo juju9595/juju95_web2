@@ -1,20 +1,8 @@
-2025-09-29 11:22:23 Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported] 
-2025-09-29 11:22:47 Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Boolean> example.day12.BookController.rent(java.util.Map<java.lang.String, java.lang.Object>)] 
-2025-09-29 11:22:48 Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Boolean> example.day12.BookController.rent(java.util.Map<java.lang.String, java.lang.Object>)] 
-2025-09-29 11:35:05 [대여신청] {bookid=1, member=홍길동} 
-2025-09-29 11:35:05 HikariPool-1 - Starting... 
-2025-09-29 11:35:05 AutoConfiguredOpenTelemetrySdk found on classpath but automatic configuration is disabled. To enable, run your JVM with -Dotel.java.global-autoconfigure.enabled=true 
-2025-09-29 11:35:05 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@235b570b 
-2025-09-29 11:35:05 HikariPool-1 - Start completed. 
-2025-09-29 11:35:05 ==>  Preparing: update books set stock = stock-1 where id=? and stock > 0 
-2025-09-29 11:35:06 ==> Parameters: 1(Integer) 
-2025-09-29 11:35:06 [대여실패] {bookid=1, member=홍길동}
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Table 'springweb2.books' doesn't exist
-### The error may exist in example/day12/BookMapper.java (best guess)
-### The error may involve example.day12.BookMapper.decStock-Inline
-### The error occurred while setting parameters
-### SQL: update books set stock = stock-1 where id=? and stock > 0
-### Cause: java.sql.SQLSyntaxErrorException: Table 'springweb2.books' doesn't exist
-; bad SQL grammar [] 
-2025-09-29 11:35:11 [대여신청] {id=1, member=홍길동} 
-2025-09-29 11:35:11 [대여실패] {id=1, member=홍길동}For input string: "null" 
+2025-09-30 11:24:57 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 11:56:19 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 12:01:58 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 12:02:19 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 12:02:54 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 12:05:13 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 12:12:53 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
+2025-09-30 12:17:54 No MyBatis mapper was found in '[example.day14]' package. Please check your configuration. 
