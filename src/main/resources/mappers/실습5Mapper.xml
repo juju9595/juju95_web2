@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- XML 이란? 마크업 이용한 데이터 저장(설정)/전달(매핑)/교환(API) 마크업언어 -->
+<!-- HTML : 마크업 이용한 웹페이지 마크업언어 -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- XML 파일내 mybatis 라이브러리 설정 -->
+
+<mapper namespace="example.실습.실습5.mapper.BookMapper">
+
+    <!-- 책books 테이블에 price 가격(int) 필드 추가 -->
+    <update id="addprice" parameterType="example.실습.실습5.mapper.BookMapper">
+        alter table books add column price int;
+    </update>
+
+    <!-- 책books 테이블에 title 책이름 필드 (longtext) 필드 수정 -->
+    <update id="updatename" parameterType="example.실습.실습5.mapper.BookMapper">
+
+    </update>
+
+    <!-- 평균 재고보다 많은 재고를 가진 도서 조회 -->
+    <select id="bookinfo" parameterType="example.실습.실습5.mapper.BookMapper">
+
+    </select>
+
+    <!-- 가장 많이 대출한 도서 조회 -->
+    <select id="bestrentinfo">
+
+    </select>
+
+
+    <!--대출기록 상세 뷰 생성 ( 책 + 대출기록 JOIN ) -->
+    <select id="rentdetail">
+        select b.id , r.book_id from rentals r inner join
+    </select>
+
+    <!-- 평균 재고보다 많은 재고를 가진 도서 뷰 생성 -->
+    <select id="">
+
+    </select>
+    <!--생성한 view 조회 대출기록 상세 뷰 생성 ( 책 + 대출기록 JOIN ) -->
+    <select id="">
+
+    </select>
+    <!--생성한 view 조회 평균 재고보다 많은 재고를 가진 도서(조건2-2) 조회 -->
+    <select id="">
+
+    </select>
+ </mapper>
