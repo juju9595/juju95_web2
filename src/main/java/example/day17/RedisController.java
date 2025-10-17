@@ -76,7 +76,7 @@ public class RedisController {
     @DeleteMapping("")  // http://localhost:8080/redis?sno=1
     public ResponseEntity< ? > delete(  @RequestParam int sno ){
         String key = "student:"+sno;// 1. 삭제할 key 구상
-        studentTemplate.delete( key );//2. 특정한 key를 이용한 엔트리(key-value한쌍) 삭제 , 템플릿객체명.delete(key);
+        // studentTemplate.delete( key );//2. 특정한 key를 이용한 엔트리(key-value한쌍) 삭제 , 템플릿객체명.delete(key);
         boolean result = studentTemplate.delete(key);
         return ResponseEntity.ok( result );
     }
