@@ -46,6 +46,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     // [9] AOP 콴점지향 프로그래밍
     implementation 'org.springframework.boot:spring-boot-starter-aop'
+    // [10] noSQL REDIS
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
 }
 

@@ -9,23 +9,23 @@
 
 <!-- xml과 매핑할 인터페이스 설정 , [src->java] 이하 경로 지정  -->
 <!-- <mapper namespace="매핑할 인터페이스 파일경로"> -->
-<mapper namespace="example.day13.XmlMapper">    <!-- mapper 시작 -->
+<mapper namespace="example.day15.XmlMapper">    <!-- mapper 시작 -->
 
     <!-- [1] 등록 -->
     <!-- <insert id="추상메소드명" parameterType="매개변수타입(클래스) 파일경로" > -->
-    <insert id="save" parameterType="example.day13.StudentDto" useGeneratedKeys="true" keyProperty="sno">
+    <insert id="save" parameterType="example.day15.StudentDto" useGeneratedKeys="true" keyProperty="sno">
         INSERT INTO student(name, kor, math)
         VALUES( #{name} , #{kor}, #{math} );
     </insert>
 
     <!-- [2] 전체조회 -->
     <!-- <select id="추상메소드명" resultType="반환타입 파일경로"> -->
-    <select id="findAll" resultType="example.day13.StudentDto">
+    <select id="findAll" resultType="example.day15.StudentDto">
         SELECT * FROM student;
     </select>
 
     <!-- [3] 개별조회 -->
-    <select id="find" parameterType="int" resultType="example.day13.StudentDto">
+    <select id="find" parameterType="int" resultType="example.day15.StudentDto">
         SELECT * FROM student WHERE sno = #{ sno };
     </select>
 
@@ -35,14 +35,14 @@
     </delete>
 
     <!-- [5] 개별수정 : -->
-    <update id="update" parameterType="example.day13.StudentDto">
+    <update id="update" parameterType="example.day15.StudentDto">
         UPDATE student SET kor = #{ kor } , math = #{ math } WHERE sno = #{ sno }
     </update>
 
     <!-- [6] IF 동적쿼리 1 -->
     <select id="query2"
             parameterType="int"
-            resultType="example.day13.StudentDto" >
+            resultType="example.day15.StudentDto" >
         select * from student where 1=1
         <if test="kor != null">
             and kor >= #{ kor }
@@ -51,7 +51,7 @@
 
     <!-- [7] IF 동적쿼리2 : parameterType 2개 이상일때 dto묶는다 또는 생략 -->
     <select id="query3"
-            resultType="example.day13.StudentDto">
+            resultType="example.day15.StudentDto">
         select * from student
         <where>
             <!-- 만약에 name값이 비어있지 않으면 조회 -->
